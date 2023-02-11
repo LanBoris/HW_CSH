@@ -1,6 +1,7 @@
 ﻿// Задача №4.
 // Программа принимает на вход 3 числа, и определяет максимальное из них.
 
+Console.Clear();
 Console.Write("Введите первое число a = ");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число b = ");
