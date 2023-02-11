@@ -1,6 +1,7 @@
 ﻿// Задача №6.
 // Программа проверяет является ли число чётным.
 
+Console.Clear();
 Console.Write("Введите первое число a = ");
 int a = Convert.ToInt32(Console.ReadLine());
 
