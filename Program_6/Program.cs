@@ -17,7 +17,6 @@ else if (number >= 1000000 && number <= 9999999)
   int result = number / 10000 % 100 % 10;
   int result2 = number / 100 % 10000 % 1000 % 100 % 10;
   Console.WriteLine($"Третьей цифрой числа {number} c ЛЕВОЙ стороны является {result}.");
-  
   Console.WriteLine($"Третьей цифрой числа {number} c ПРАВОЙ стороны является {result2}.");
 }
 else
