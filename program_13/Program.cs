@@ -20,4 +20,12 @@ Console.Write("Введите число, которое надо возвест
 int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите степень в которую надо возвести число: ");
 int b = Convert.ToInt32(Console.ReadLine());
+while (a < 0 || b < 0)
+{
+  if (a < 0 || b < 0) Console.WriteLine("Вы ввели отрицательое число");
+  Console.Write("Введите число, которое надо возвести в степень: ");
+  a = Convert.ToInt32(Console.ReadLine());
+  Console.Write("Введите степень в которую надо возвести число: ");
+  b = Convert.ToInt32(Console.ReadLine());
+}
 Console.WriteLine($"Возводя число {a} в степень {b} получим: {(GetDegree(a, b))}");
