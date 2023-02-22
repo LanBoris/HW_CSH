@@ -27,6 +27,12 @@ void FillArrayTwo(int[] array2)
 
 Console.Write("Введите размер массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
+while (size <= 0)
+{
+  Console.Write("Размер не может быть отрицательным или нулевым."
+                  + "\n" + "Введите новый размер: ");
+  size = Convert.ToInt32(Console.ReadLine());
+}
 int[] array = new int[size];
 
 Console.WriteLine("Каким способом вы хотите заполнить массив?"
@@ -36,12 +42,12 @@ Console.WriteLine("Каким способом вы хотите заполни�
 int answer = Convert.ToInt32(Console.ReadLine());
 if (answer == 1) FillArrayOne(array);
 else if (answer == 2) FillArrayTwo(array);
-else 
+else
 {
-  Console.WriteLine("Такого варианта не существует!"); 
+  Console.WriteLine("Такого варианта не существует!");
   return;
 }
 
-Console.ForegroundColor=ConsoleColor.DarkYellow;
+Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine("\n" + $"Массив: [{String.Join("; ", array)}]");
 Console.ResetColor();
