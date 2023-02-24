@@ -32,6 +32,12 @@ void CounterEven(int[] array, int size)
 
 Console.Write("Введите размер массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
+while (size <= 0)
+{
+  Console.Write("Размер не может быть отрицательным или нулевым."
+                  + "\n" + "Введите новый размер: ");
+  size = Convert.ToInt32(Console.ReadLine());
+}
 int[] array = new int[size];
 FillArray(array);
 PrintArray(array);
