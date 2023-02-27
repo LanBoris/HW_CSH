@@ -11,7 +11,7 @@ void FillArray(double[] array)
   for (int i = 0; i < array.Length; i++)
   {
     array[i] = new Random().NextDouble();
-    array[i] = Math.Round(array[i] * 100, 2);
+    array[i] = Math.Round(array[i] * 100);
   }
 }
 
@@ -22,9 +22,9 @@ void PrintArray(double[] array)
 
 void DiffMaxMin(double[] array)
 {
-  double max = Math.Round(array.Max(), 2);
-  double min = Math.Round(array.Min(), 2);
-  double diffMaxMin = Math.Round(max - min, 2);
+  double max = Math.Round(array.Max());
+  double min = Math.Round(array.Min());
+  double diffMaxMin = Math.Round(max - min);
   Console.WriteLine($"Разница между максимальным: {max} и минимальным: {min} элементами массива равна: {diffMaxMin}" + "\n");
 }
 
