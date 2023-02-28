@@ -17,4 +17,6 @@ double k2 = Convert.ToInt32(Console.ReadLine());
 double X = (b2 - b1) / (k1 - k2);
 double Y = ((k1 * b2) - (k2 * b1)) / (k1 - k2);
 if (k1 == k2) Console.WriteLine("Прямые параллельны!");
-else Console.WriteLine("\n" + $"Координаты точки пересечения прямых: ({X:f1}; {Y:f1})");
+else Console.WriteLine("\n" + "Координаты точки пересечения прямых," 
+                            + "заданных уравнениями y = k1*x + b1 и y = k2*x + b2" 
+                            + $": ({X:f1}; {Y:f1})");
