@@ -30,6 +30,12 @@ int CounterPositive(int[] array)
 
 Console.Write("Введите количество вводимых чисел М: ");
 int size = Convert.ToInt32(Console.ReadLine());
+while (size<=0)
+{
+  Console.WriteLine("Вы ввели 0 или отрицательное число!" + "\n");
+  Console.Write("Введите количество вводимых чисел М: ");
+  size = Convert.ToInt32(Console.ReadLine());
+}
 int[] array = FillArray(size);
 int counterPositive = CounterPositive(array);
 Console.WriteLine("\n" + $"Количество положительных чисел: {counterPositive}");
