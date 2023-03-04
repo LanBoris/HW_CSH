@@ -37,13 +37,31 @@ void PrintMatrix(int[,] matr)
 
 int CheckRowsColumns(int number)
 {
-  while (number < 0)
+  while (number <= 0)
   {
     Console.WriteLine("Вы ввели отрицательное число!" + "\n");
     Console.Write("Введите снова: ");
     number = Convert.ToInt32(Console.ReadLine());
   }
   return number;
+}
+
+int SumMainDiagonal(int[,] inputMatrix)
+{
+  int countRows = inputMatrix.GetLength(0);
+  int countColumns = inputMatrix.GetLength(1);
+  int sumDiagonal = 0;
+  for (int i = 0; i < countRows; i++)
+  {
+    for (int j = 0; j < countColumns; j++)
+    {
+      if (i==j)
+      {
+        sumDiagonal+=inputMatrix[i,j];
+      }
+    }
+  }
+  return sumDiagonal;
 }
 
 Console.Write("Введите количество строк массива: ");
@@ -56,3 +74,9 @@ Console.Write("Введите минимальное значение: ");
 int minValue = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите максимальное значение: ");
 int maxValue = Convert.ToInt32(Console.ReadLine());
+
+int[,] matrix = GetMatrix(rows, columns, minValue, maxValue);
+PrintMatrix(matrix);
+
+int result = SumMainDiagonal(matrix);
+Console.WriteLine($"Сумма элементов находящихся на главной диагонали: {result}.");
