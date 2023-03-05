@@ -74,7 +74,6 @@ Console.Write("Введите минимальное значение: ");
 int minValue = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите максимальное значение: ");
 int maxValue = Convert.ToInt32(Console.ReadLine());
-
 int[,] matrix = GetMatrix(rows, columns, minValue, maxValue);
 PrintMatrix(matrix);
 
