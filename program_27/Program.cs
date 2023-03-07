@@ -91,7 +91,6 @@ int CheckRowsColumns(int number)
 /// <param name="inputMatr">Входной массив для сортировки</param>
 void SortRowsMatrixDescending(int[,] inputMatr)
 {
-  int temp = 0;
   int countRows = inputMatr.GetLength(0);
   int countCols = inputMatr.GetLength(1);
   for (int i = 0; i < countRows; i++)
@@ -102,7 +101,7 @@ void SortRowsMatrixDescending(int[,] inputMatr)
       {
         if (inputMatr[i,j] < inputMatr[i, k])
         {
-          temp = inputMatr[i, j];
+          int temp = inputMatr[i, j];
           inputMatr[i, j] = inputMatr[i, k];
           inputMatr[i, k] = temp;
         }
