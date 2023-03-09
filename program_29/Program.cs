@@ -26,7 +26,14 @@ Console.WriteLine("Результат перемножения матриц:");
 int[,] multiMatrix = FillMultiplyMatrix(matrixOne, matrixTwo);
 PrintMatrix(multiMatrix);
 
-
+/// <summary>
+/// Метод заполняет двумерный массив
+/// </summary>
+/// <param name="rows">Кол-во строк</param>
+/// <param name="cols">Кол-во столбцов</param>
+/// <param name="minValue">Минимальное значение интервала чисел для рандома</param>
+/// <param name="maxValue">Максимальное значение интервала чисел для рандома</param>
+/// <returns>Заполненный массив</returns>
 int[,] FillMatrix(int rows, int cols, int minValue, int maxValue)
 {
   int[,] matrix = new int[rows, cols];
@@ -40,7 +47,10 @@ int[,] FillMatrix(int rows, int cols, int minValue, int maxValue)
   return matrix;
 }
 
-
+/// <summary>
+/// Метод выводит двумерный массив на экран
+/// </summary>
+/// <param name="inputMatrix">Входящий массив, который надо вывести на экран</param>
 void PrintMatrix(int[,] inputMatrix)
 {
   for (int i = 0; i < inputMatrix.GetLength(0); i++)
@@ -53,7 +63,12 @@ void PrintMatrix(int[,] inputMatrix)
   }
 }
 
-
+/// <summary>
+/// Метод создает матрицу - результат перемножения двух матриц
+/// </summary>
+/// <param name="matrOne">Первая входная матрица для перемножения</param>
+/// <param name="matrTwo">Вторая входная матрица для перемножения</param>
+/// <returns>Матрицу - результат перемножения</returns>
 int[,] FillMultiplyMatrix(int[,] matrOne, int[,] matrTwo)
 {
   int countRows = matrOne.GetLength(0);
