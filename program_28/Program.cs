@@ -40,7 +40,7 @@ FindMinSumRow(matrix);
 /// <param name="cols">Кол-во столбцов</param>
 /// <param name="minValue">Минимальное число интервала рандомайзера</param>
 /// <param name="maxValue">Максимальное число интервала рандомайзера</param>
-/// <returns></returns>
+/// <returns>Заполненный двумерный массив</returns>
 int[,] FillMatrix(int rows, int cols, int minValue, int maxValue)
 {
   int[,] matrix = new int[rows, cols];
@@ -74,7 +74,7 @@ void PrintMatrix(int[,] inputMatrix)
 /// Метод проверяющий вводимые числа на отрицательность и равность нулю.
 /// </summary>
 /// <param name="number">Входящее число</param>
-/// <returns></returns>
+/// <returns>Положительное число</returns>
 int CheckRowsColumns(int number)
 {
   while (number <= 0)
