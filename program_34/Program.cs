@@ -14,7 +14,7 @@ Console.Write("Введите число n: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
 numberN = CheckNumber(numberN);
 
-Console.WriteLine("\n" + $"Функция Аккермана A({numberM},{numberN}) равна:" 
+Console.WriteLine("\n" + $"Функция Аккермана A({numberM},{numberN}) равна:"
                        + $"{GetAckermannFunction(numberM, numberN)}");
 
 /// <summary>
@@ -25,9 +25,9 @@ Console.WriteLine("\n" + $"Функция Аккермана A({numberM},{number
 /// <returns>Результат вычисления функции Аккермана A(m,n)</returns>
 int GetAckermannFunction(int numM, int numN)
 {
-  if (numM == 0) return numN+1;
-  if (numN == 0) return GetAckermannFunction(numM-1, 1);
-  return GetAckermannFunction(numM-1, GetAckermannFunction(numM, numN-1));
+  if (numM == 0) return numN + 1;
+  if (numN == 0 && numM > 0) return GetAckermannFunction(numM - 1, 1);
+  return GetAckermannFunction(numM - 1, GetAckermannFunction(numM, numN - 1));
 }
 
 /// <summary>
@@ -37,7 +37,7 @@ int GetAckermannFunction(int numM, int numN)
 /// <returns>Неотрицательное число</returns>
 int CheckNumber(int num)
 {
-  while (num<0)
+  while (num < 0)
   {
     Console.WriteLine("Вы ввели отрицательное число.");
     Console.Write("Введите новое число: ");
